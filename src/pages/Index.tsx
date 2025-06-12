@@ -15,13 +15,13 @@ const Index = () => {
             <Gamepad2 size={80} className="mx-auto text-primary glow-effect" />
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text">
+          <h1 className="text-3xl md:text-8xl font-bold mb-4 glow-text">
             CHETAN PATIL
           </h1>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
+          <h2 className="text-1xl md:text-3xl font-bold mb-6 glow-text">
             Game Developer &
-            <span className="text-primary block">Creative Designer</span>
+            <span className="text-primary"> Creative Designer</span>
           </h2>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">

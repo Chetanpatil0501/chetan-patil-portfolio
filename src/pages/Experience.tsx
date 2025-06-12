@@ -5,41 +5,40 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      position: "Senior Game Developer",
-      company: "Epic Games Studio",
-      location: "San Francisco, CA",
-      duration: "2022 - Present",
-      description: "Lead development of AAA game titles, implementing core gameplay systems and optimizing performance for multiple platforms.",
+      position: "Full Time Game Programmer",
+      company: "MAGNIMUS SYSTEMS",
+      location: "Banglore, Karnataka",
+      duration: "04/2024 - Present",
+      description: "Lead development of emersive XR projects for META Quest.",
       achievements: [
-        "Led a team of 8 developers in creating award-winning gameplay mechanics",
-        "Optimized game performance resulting in 40% faster load times",
-        "Implemented multiplayer networking architecture supporting 100+ concurrent players"
+        "Successfully launched 2 Meta Quest projects on Meta store",
+        "Worked on Multiplayer using NetCode, Photon and Fishnet",
+        "Managed all the games that were showcased at the Meta office in Hyderabad"
       ]
     },
     {
       id: 2,
-      position: "Game Programmer",
-      company: "Indie Game Collective",
+      position: "Full-stack Game Programmer",
+      company: "OUTSCAL",
       location: "Remote",
-      duration: "2020 - 2022",
-      description: "Developed innovative indie games using various game engines and programming languages.",
+      duration: "07/2022 - 03/2023",
+      description: "Contributed to evaluating and improving learning content byanalyzing and testing course modules.",
       achievements: [
-        "Created 5 successful indie game titles with 500K+ downloads",
-        "Collaborated with artists and designers to bring creative visions to life",
-        "Implemented procedural generation systems for infinite gameplay"
+        "Learned Data structure and algorithms",
+        "Collaborated with students and upskilled along with them",
       ]
     },
     {
       id: 3,
-      position: "Junior Game Developer",
-      company: "GameTech Solutions",
-      location: "Austin, TX",
-      duration: "2018 - 2020",
-      description: "Started my professional journey in game development, focusing on mobile game development and UI/UX implementation.",
+      position: "Game Developer Intern",
+      company: "JASH ENTERTAINMENT",
+      location: "Ahmedabad, Gujarat",
+      duration: "11/2022 - 03/2023",
+      description: "Started my professional journey in game development, focusing on web game development and UI/UX implementation.",
       achievements: [
-        "Developed mobile games with 1M+ combined downloads",
-        "Specialized in touch-based gameplay mechanics",
-        "Collaborated on live-service game features and updates"
+        "Developed Real money web games",
+        "Speciallized in Rest-Api",
+        "Collaborated With small but creative team"
       ]
     }
   ];
@@ -65,7 +64,7 @@ const Experience = () => {
               <div key={exp.id} className="relative">
                 {/* Timeline Dot */}
                 <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background animate-pulse-glow"></div>
-                
+
                 {/* Experience Card */}
                 <div className="ml-20 card-glow">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -76,7 +75,7 @@ const Experience = () => {
                         <span className="font-semibold">{exp.company}</span>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-col md:items-end text-sm text-muted-foreground">
                       <div className="flex items-center mb-1">
                         <Calendar className="mr-2" size={16} />

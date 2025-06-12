@@ -3,9 +3,9 @@ import { Code, Gamepad2, Coffee, Heart } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    "Unity 3D", "Unreal Engine", "C#", "C++", "JavaScript", "Python",
-    "Game Design", "3D Modeling", "Animation", "UI/UX Design",
-    "Version Control", "Agile Development"
+    "Unity 3D", "Unreal Engine", "Construct 3", "C#", "C++", "HTML5", "Java Script",
+    "Game Design", "Photoshop", "Illustrator", "Blender",
+    "Version Control"
   ];
 
   const interests = [
@@ -31,17 +31,21 @@ const About = () => {
           {/* Profile Section */}
           <div className="card-glow text-center lg:text-left">
             {/* Profile Photo Placeholder */}
-            <div className="w-48 h-48 mx-auto lg:mx-0 mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center glow-effect">
-              <span className="text-6xl font-bold text-white">JD</span>
+            <div className="w-48 h-48 mx-auto lg:mx-0 mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center glow-effect overflow-hidden">
+              <img
+                src="your-image-source.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
             </div>
-            
-            <h2 className="text-3xl font-bold mb-4">John Developer</h2>
+
+            <h2 className="text-3xl font-bold mb-4">Chetan Patil</h2>
             <p className="text-primary font-semibold text-lg mb-4">Game Programmer & Designer</p>
-            
+
             <p className="text-muted-foreground leading-relaxed">
-              With over 6 years of experience in game development, I specialize in creating 
-              engaging gameplay experiences that captivate players. My journey began with 
-              simple 2D platformers and has evolved to include complex 3D worlds with 
+              With over 2.5 years of experience in game development, I specialize in creating
+              engaging gameplay experiences that captivate players. My journey began with
+              simple 2D platformers and has evolved to include complex 3D worlds with
               intricate systems and mechanics.
             </p>
           </div>
@@ -51,13 +55,13 @@ const About = () => {
             <div className="card-glow">
               <h3 className="text-2xl font-bold mb-4 text-secondary">My Story</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                My passion for game development started when I was 12 years old, 
-                modding my favorite games and wondering how they worked. This curiosity 
-                led me to pursue computer science and eventually specialize in game programming.
+                My passion for game development started when I was 12 years old,
+                modding my favorite games and wondering how they worked. This curiosity
+                led me to pursue Game development degree and eventually specialize in game programming.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, I combine technical expertise with creative vision to build 
-                games that not only function flawlessly but also tell compelling stories 
+                Today, I combine technical expertise with creative vision to build
+                games that not only function flawlessly but also tell compelling stories
                 and provide memorable experiences for players around the world.
               </p>
             </div>
@@ -65,9 +69,9 @@ const About = () => {
             <div className="card-glow">
               <h3 className="text-2xl font-bold mb-4 text-accent">Philosophy</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I believe that great games are born from the perfect balance of 
-                innovation and accessibility. Every line of code should serve the 
-                player's experience, and every design decision should enhance the 
+                I believe that great games are born from the perfect balance of
+                innovation and accessibility. Every line of code should serve the
+                player's experience, and every design decision should enhance the
                 emotional connection between the player and the game world.
               </p>
             </div>
