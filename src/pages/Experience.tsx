@@ -51,7 +51,7 @@ const Experience = () => {
             MY <span className="text-primary">EXPERIENCE</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            I have over 2 years of experience in game development,
+            I have over 3 years of experience in game development,
             working on a diverse range of projects including VR simulations,
             Android games, and cross-platform applications. Passionate about building immersive and engaging experiences.
           </p>
