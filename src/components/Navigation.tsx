@@ -88,7 +88,7 @@ const Navigation = () => {
             </a>
 
             <a
-              href="https://drive.google.com/file/d/1wheJQoefnnBY39Nh5_U4sRIJCQf6ae5_/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1E7n_FX8AitjcdClZZb-w3BBpYsW-ccku/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold 
@@ -163,7 +163,7 @@ const Navigation = () => {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1wheJQoefnnBY39Nh5_U4sRIJCQf6ae5_/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1E7n_FX8AitjcdClZZb-w3BBpYsW-ccku/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-link flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold 
