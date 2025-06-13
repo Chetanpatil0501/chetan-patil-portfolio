@@ -242,10 +242,9 @@ const Portfolio = () => {
                   >
                     {project.videoId && hoveredId === project.id ? (
                       <iframe
-                        src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0`}
+                        src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=0&rel=1`}
                         title={project.title}
                         className="absolute top-0 left-0 w-full h-full"
-                        allow="autoplay; encrypted-media; picture-in-picture"
                         allowFullScreen
                       />
                     ) : (
@@ -256,10 +255,10 @@ const Portfolio = () => {
                       />
                     )}
 
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center pointer-events-none">
+                    {/* <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center pointer-events-none">
                       <Play size={64} className="text-white animate-pulse-glow transform group-hover:scale-125 transition-transform duration-300" />
-                    </div>
-                    <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 transition-all duration-500 rounded-lg pointer-events-none"></div>
+                    </div> */}
+                    {/* <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 transition-all duration-500 rounded-lg pointer-events-none"></div> */}
                   </div>
                 </div>
 
