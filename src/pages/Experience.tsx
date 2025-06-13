@@ -48,7 +48,7 @@ const Experience = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            My <span className="text-primary">Experience</span>
+            MY <span className="text-primary">EXPERIENCE</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             I have over 2 years of experience in game development,

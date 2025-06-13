@@ -1,14 +1,35 @@
-
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted!');
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        'service_h8sze4u',  // Replace with your EmailJS Service ID
+        'template_u5cazmg', // Replace with your EmailJS Template ID
+        form.current,
+        'X62AoFWN5-EUXCZ2u'   // Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          form.current?.reset();
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('Failed to send message.');
+        }
+      );
   };
 
   const contactInfo = [
@@ -43,7 +64,6 @@ const Contact = () => {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/chetan-patil-0453571b0/"
     }
-
   ];
 
   return (
@@ -51,7 +71,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            Get In <span className="text-primary">Touch</span>
+            GET IN <span className="text-primary">TOUCH</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to collaborate on your next gaming project? Let's create something amazing together!
@@ -62,7 +82,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="card-glow">
             <h2 className="text-3xl font-bold mb-6 text-primary">Send Me a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-semibold mb-2">
@@ -70,6 +90,7 @@ const Contact = () => {
                   </label>
                   <Input
                     id="firstName"
+                    name="firstName"
                     type="text"
                     placeholder="John"
                     className="bg-muted/50 border-border/50 focus:border-primary"
@@ -82,6 +103,7 @@ const Contact = () => {
                   </label>
                   <Input
                     id="lastName"
+                    name="lastName"
                     type="text"
                     placeholder="Doe"
                     className="bg-muted/50 border-border/50 focus:border-primary"
@@ -96,6 +118,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="john.doe@email.com"
                   className="bg-muted/50 border-border/50 focus:border-primary"
@@ -109,6 +132,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="subject"
+                  name="subject"
                   type="text"
                   placeholder="Project Collaboration Opportunity"
                   className="bg-muted/50 border-border/50 focus:border-primary"
@@ -122,6 +146,7 @@ const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Tell me about your project and how I can help..."
                   rows={6}
                   className="bg-muted/50 border-border/50 focus:border-primary resize-none"
@@ -141,7 +166,6 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            {/* Contact Details */}
             <div className="card-glow">
               <h2 className="text-3xl font-bold mb-6 text-secondary">Contact Information</h2>
               <div className="space-y-4">
@@ -161,7 +185,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="card-glow">
               <h2 className="text-3xl font-bold mb-6 text-accent">Follow Me</h2>
               <div className="flex space-x-4">
@@ -179,7 +202,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Availability */}
             <div className="card-glow">
               <h2 className="text-3xl font-bold mb-6 text-primary">Availability</h2>
               <div className="space-y-4">

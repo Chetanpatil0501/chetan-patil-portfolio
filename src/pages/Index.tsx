@@ -24,7 +24,7 @@ const Index = () => {
             <span className="text-primary"> Creative Designer</span>
           </h2>
 
-          <p className="text-xl md:text-2xl mb-8 max-w-2.5xl mx-auto font-bold">
+          <p className="text-xl md:text-2xl mb-8 max-w-2.5xl mx-auto">
             Crafting immersive gaming experiences with cutting-edge technology, and innovative design
           </p>
 

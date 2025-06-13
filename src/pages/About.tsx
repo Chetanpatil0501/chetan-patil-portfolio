@@ -20,7 +20,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            About <span className="text-primary">Me</span>
+            ABOUT <span className="text-primary">ME</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Passionate game developer with a love for creating immersive experiences

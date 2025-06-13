@@ -99,6 +99,7 @@ const Portfolio = () => {
         " Take down enemies without getting caught using various tactics: shoot, kick, and even throw weapons." +
         " Craft your strategy to eliminate every threat. Get ready for the ultimate challenge.",
       role: [
+
         "Full game logic developed by me.",
         "Game optimization",
         "UI Integration",
@@ -220,7 +221,7 @@ const Portfolio = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            My <span className="text-primary">Portfolio</span>
+            MY <span className="text-primary">PORTFOLIO</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Showcasing my latest game development projects and creative works
