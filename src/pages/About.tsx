@@ -43,7 +43,7 @@ const About = () => {
             <p className="text-primary font-semibold text-lg mb-4">Game Programmer & Designer</p>
 
             <p className="text-muted-foreground leading-relaxed">
-              With over 2.5 years of experience in game development, I specialize in creating
+              With over 3 years of experience in game development, I specialize in creating
               engaging gameplay experiences that captivate players. My journey began with
               simple 2D platformers and has evolved to include complex 3D worlds with
               intricate systems and mechanics.

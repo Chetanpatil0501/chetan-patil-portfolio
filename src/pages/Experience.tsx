@@ -5,7 +5,7 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      position: "Full Time Game Programmer",
+      position: "Associate Game Programmer",
       company: "MAGNIMUS SYSTEMS",
       location: "Banglore, Karnataka",
       duration: "04/2024 - Present",
