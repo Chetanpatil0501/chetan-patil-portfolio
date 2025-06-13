@@ -33,7 +33,7 @@ const About = () => {
             {/* Profile Photo Placeholder */}
             <div className="w-48 h-48 mx-auto lg:mx-0 mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center glow-effect overflow-hidden">
               <img
-                src="your-image-source.jpg"
+                src="lovable-uploads\About Profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

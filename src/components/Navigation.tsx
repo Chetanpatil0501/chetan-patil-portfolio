@@ -25,13 +25,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="hover:scale-105 transition-all duration-300"
             >
-              <img 
-                src="/lovable-uploads/e9723c0c-2cf8-4ab4-81c9-237a8890f99c.png" 
-                alt="Logo" 
+              <img
+                src="/lovable-uploads/e9723c0c-2cf8-4ab4-81c9-237a8890f99c.png"
+                alt="Logo"
                 className="h-10 w-auto"
               />
             </Link>
@@ -43,7 +43,7 @@ const Navigation = () => {
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 const isDisabled = item.path === '/' && location.pathname === '/';
-                
+
                 return (
                   <Link
                     key={item.path}
@@ -54,9 +54,9 @@ const Navigation = () => {
                       hover:shadow-lg hover:shadow-primary/20`}
                     onClick={(e) => isDisabled && e.preventDefault()}
                   >
-                    <item.icon 
-                      size={18} 
-                      className="transition-all duration-300 group-hover:rotate-12 group-active:rotate-6" 
+                    <item.icon
+                      size={18}
+                      className="transition-all duration-300 group-hover:rotate-12 group-active:rotate-6"
                     />
                     <span className="relative">
                       {item.label}
@@ -86,6 +86,7 @@ const Navigation = () => {
             >
               <Linkedin size={20} className="transition-transform duration-300 hover:rotate-12" />
             </a>
+
             <a
               href="https://drive.google.com/file/d/1Embfq2xnv43TSBlQySK979pHCtaRaYsa/view"
               target="_blank"
@@ -121,7 +122,7 @@ const Navigation = () => {
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 const isDisabled = item.path === '/' && location.pathname === '/';
-                
+
                 return (
                   <Link
                     key={item.path}
@@ -140,7 +141,7 @@ const Navigation = () => {
                   </Link>
                 );
               })}
-              
+
               {/* Mobile Social Links */}
               <div className="flex space-x-4 pt-4 border-t border-border/30">
                 <a

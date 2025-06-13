@@ -16,7 +16,7 @@ const Index = () => {
           </div>
 
           <h1 className="text-3xl md:text-8xl font-bold mb-4 glow-text">
-            CHETAN PATIL
+            CHETAN  <span className="text-primary"> PATIL</span>
           </h1>
 
           <h2 className="text-1xl md:text-3xl font-bold mb-6 glow-text">
@@ -24,8 +24,8 @@ const Index = () => {
             <span className="text-primary"> Creative Designer</span>
           </h2>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Crafting immersive gaming experiences with cutting-edge technology and innovative design
+          <p className="text-xl md:text-2xl mb-8 max-w-2.5xl mx-auto font-bold">
+            Crafting immersive gaming experiences with cutting-edge technology, and innovative design
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -59,7 +59,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-60 px-0">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 glow-text">
             What I Do Best

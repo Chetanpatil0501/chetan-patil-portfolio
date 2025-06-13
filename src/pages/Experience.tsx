@@ -11,9 +11,9 @@ const Experience = () => {
       duration: "04/2024 - Present",
       description: "Lead development of emersive XR projects for META Quest.",
       achievements: [
-        "Successfully launched 2 Meta Quest projects on Meta store",
+        "Successfully launched 2 Meta Quest game on Meta store",
         "Worked on Multiplayer using NetCode, Photon and Fishnet",
-        "Managed all the games that were showcased at the Meta office in Hyderabad"
+        "Managed Game showcased at the Meta office in Hyderabad"
       ]
     },
     {
@@ -51,7 +51,9 @@ const Experience = () => {
             My <span className="text-primary">Experience</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A journey through my professional game development career
+            I have over 2 years of experience in game development,
+            working on a diverse range of projects including VR simulations,
+            Android games, and cross-platform applications. Passionate about building immersive and engaging experiences.
           </p>
         </div>
 
