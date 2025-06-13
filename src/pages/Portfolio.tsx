@@ -242,7 +242,7 @@ const Portfolio = () => {
                   >
                     {project.videoId && hoveredId === project.id ? (
                       <iframe
-                        src={`https://www.youtube.com/embed/${project.videoId}?autoplay=0&mute=1&controls=0&showinfo=0&modestbranding=0&rel=1`}
+                        src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=0&rel=1`}
                         title={project.title}
                         className="absolute top-0 left-0 w-full h-full"
                         allowFullScreen
