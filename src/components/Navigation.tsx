@@ -37,6 +37,35 @@ const Navigation = () => {
             </Link>
           </div>
 
+          <div className="flex items-center space-x-2 md:hidden">
+  <a
+    href="https://github.com/Chetanpatil0501"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="nav-link p-2 hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-primary/20 rounded-lg"
+  >
+    <Github size={20} />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/chetan-patil-0453571b0/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="nav-link p-2 hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-primary/20 rounded-lg"
+  >
+    <Linkedin size={20} />
+  </a>
+  <a
+    href="https://drive.google.com/file/d/1E7n_FX8AitjcdClZZb-w3BBpYsW-ccku/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="nav-link flex items-center space-x-1 px-2 py-1 bg-primary text-primary-foreground rounded-lg font-semibold 
+      transition-all duration-300 hover:bg-primary/90 hover:scale-110 active:scale-95"
+  >
+    <FileText size={16} />
+    <span className="text-sm">Resume</span>
+  </a>
+</div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -143,37 +172,7 @@ const Navigation = () => {
               })}
 
               {/* Mobile Social Links */}
-              <div className="flex space-x-4 pt-4 border-t border-border/30">
-                <a
-                  href="https://github.com/Chetanpatil0501"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link p-2 hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-primary/20 rounded-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Github size={20} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/chetan-patil-0453571b0/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link p-2 hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-primary/20 rounded-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Linkedin size={20} />
-                </a>
-                <a
-                  href="https://drive.google.com/file/d/1E7n_FX8AitjcdClZZb-w3BBpYsW-ccku/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold 
-                    transition-all duration-300 hover:bg-primary/90 hover:scale-110 active:scale-95"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <FileText size={18} />
-                  <span>Resume</span>
-                </a>
-              </div>
+              
             </div>
           </div>
         )}

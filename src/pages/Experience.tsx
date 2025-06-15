@@ -21,7 +21,7 @@ const Experience = () => {
       position: "Full-stack Game Programmer",
       company: "OUTSCAL",
       location: "Remote",
-      duration: "07/2022 - 03/2023",
+      duration: "07/2022 - 03/2024",
       description: "Contributed to evaluating and improving learning content byanalyzing and testing course modules.",
       achievements: [
         "Learned Data structure and algorithms",
