@@ -1,19 +1,20 @@
 {
     "headers": [
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://*.youtube.com; frame-src https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; font-src 'self'; connect-src 'self';"
-                }
-            ]
-        }
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://*.youtube.com; frame-src https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://i.ytimg.com https://*.ytimg.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formcarry.com; object-src 'none';"
+          }
+        ]
+      }
     ],
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
     ]
-}
+  }
+  
