@@ -2,34 +2,37 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.current) return;
+    const form = formRef.current;
+    const formData = new FormData(form);
 
-    emailjs
-      .sendForm(
-        'service_bp2ytjg',  // Replace with your EmailJS Service ID
-        'template_u5cazmg', // Replace with your EmailJS Template ID
-        form.current,
-        'hX4elnkT5fl9uP3O2'   // Replace with your EmailJS Public Key
-      )
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          form.current?.reset();
-        },
-        (error) => {
-          console.error('FAILED...', error);
-          alert('Failed to send message.');
+    try {
+      const response = await fetch("https://formsubmit.co/el/judisa", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
         }
-      );
+      });
+
+      if (response.ok) {
+        if (window.confirm("✅ Message sent successfully!")) {
+          form.reset();
+        }
+      } else {
+        window.alert("❌ Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error while submitting:", error);
+      window.alert("❌ Something went wrong. Please try again.");
+    }
   };
 
   const contactInfo = [
@@ -82,99 +85,49 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="card-glow">
             <h2 className="text-3xl font-bold mb-6 text-primary">Send Me a Message</h2>
-            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-semibold mb-2">
-                    First Name
-                  </label>
-                  <Input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    placeholder="John"
-                    className="bg-muted/50 border-border/50 focus:border-primary"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold mb-2">
-                    Last Name
-                  </label>
-                  <Input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    placeholder="Doe"
-                    className="bg-muted/50 border-border/50 focus:border-primary"
-                    required
-                  />
-                </div>
-              </div>
 
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              {/* Optional FormSubmit hidden fields */}
+              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_template" value="table" />
+
+              {/* Name */}
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="john.doe@email.com"
-                  className="bg-muted/50 border-border/50 focus:border-primary"
-                  required
-                />
+                <label htmlFor="name" className="block text-sm font-semibold mb-2">Full Name</label>
+                <Input id="name" name="name" type="text" placeholder="John Doe" required />
               </div>
 
+              {/* Email */}
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold mb-2">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  placeholder="Project Collaboration Opportunity"
-                  className="bg-muted/50 border-border/50 focus:border-primary"
-                  required
-                />
+                <label htmlFor="email" className="block text-sm font-semibold mb-2">Email</label>
+                <Input id="email" name="email" type="email" placeholder="john.doe@email.com" required />
               </div>
 
+              {/* Subject */}
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell me about your project and how I can help..."
-                  rows={6}
-                  className="bg-muted/50 border-border/50 focus:border-primary resize-none"
-                  required
-                />
+                <label htmlFor="subject" className="block text-sm font-semibold mb-2">Subject</label>
+                <Input id="subject" name="subject" type="text" placeholder="Project Collaboration Opportunity" required />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 glow-effect"
-              >
-                <Send className="mr-2" size={18} />
-                Send Message
+              {/* Message */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold mb-2">Message</label>
+                <Textarea id="message" name="message" placeholder="Tell me about your project..." rows={6} required />
+              </div>
+
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 glow-effect">
+                <Send className="mr-2" size={18} /> Send Message
               </Button>
             </form>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="space-y-8">
             <div className="card-glow">
               <h2 className="text-3xl font-bold mb-6 text-secondary">Contact Information</h2>
               <div className="space-y-4">
                 {contactInfo.map((info) => (
-                  <a
-                    key={info.label}
-                    href={info.href}
-                    className="flex items-center space-x-4 p-4 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/10 hover:border-primary/30 border border-transparent"
-                  >
+                  <a key={info.label} href={info.href} className="flex items-center space-x-4 p-4 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/10">
                     <info.icon size={24} className="text-primary" />
                     <div>
                       <p className="font-semibold">{info.label}</p>
@@ -189,13 +142,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-6 text-accent">Follow Me</h2>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/20 hover:text-primary border border-transparent hover:border-primary/30"
-                  >
+                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/20">
                     <social.icon size={24} />
                   </a>
                 ))}
@@ -219,6 +166,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
