@@ -97,7 +97,49 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            {/* (Your contact cards code unchanged...) */}
+            <div className="card-glow">
+              <h2 className="text-3xl font-bold mb-6 text-secondary">Contact Information</h2>
+              <div className="space-y-4">
+                {contactInfo.map((info) => (
+                  <a key={info.label} href={info.href} className="flex items-center space-x-4 p-4 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/10">
+                    <info.icon size={24} className="text-primary" />
+                    <div>
+                      <p className="font-semibold">{info.label}</p>
+                      <p className="text-muted-foreground">{info.value}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="card-glow">
+              <h2 className="text-3xl font-bold mb-6 text-accent">Follow Me</h2>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-lg bg-muted/30 transition-all duration-300 hover:bg-primary/20">
+                    <social.icon size={24} />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="card-glow">
+              <h2 className="text-3xl font-bold mb-6 text-primary">Availability</h2>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
+                  <span className="font-semibold">Freelance Projects</span>
+                  <span className="text-green-400 font-semibold">Available</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
+                  <span className="font-semibold">Full-time Positions</span>
+                  <span className="text-yellow-400 font-semibold">Open to Discuss</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
+                  <span className="font-semibold">Response Time</span>
+                  <span className="text-primary font-semibold">24-48 hours</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -105,10 +147,7 @@ const Contact = () => {
       {/* Modal */}
       {success && (
         <>
-          {/* Blurred Background */}
           <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40" onClick={closeModal}></div>
-
-          {/* Modal Content */}
           <div className="fixed inset-0 flex items-center justify-center z-50">
             <div
               className="bg-white rounded-xl shadow-lg p-8 text-center space-y-4 max-w-sm mx-auto"
